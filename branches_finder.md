@@ -38,7 +38,7 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
 - First argument is an array of a restaurant branch's objects containing name, location and currentStock, example:
   ```js
   [
-    { name: “Ladprao”, location: [3, 4], currentStock: 5 },
+    { name: "Ladprao", location: [3, 4], currentStock: 5 },
     ...
   ]
   ```
@@ -53,16 +53,16 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
   - When there are no branches that have enough stock to deliver even combined all branches stock, return an empty array.
 - This function must return the arrays branches to delivering the customer order with object containing the restaurant branch name, location, delivery cost, and amount of pizza to deliver in this format
   ```js
-  { name: “Ladprao”, location: [5, 7], deliveryCost: 6, amount: 2 }
+  { name: "Ladprao", location: [5, 7], deliveryCost: 6, amount: 2 }
   ```
 
 ## Test Cases
 ```js
 branchesFinder()
 
-// ----------------------------------------------------------------
-// Test case #1
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #1
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [2, 4], currentStock: 5 },
@@ -73,9 +73,9 @@ branchesFinder(
 // Return
 [{ name: "Ekkamai", location: [7, 8], deliveryCost: 3, amount: 2 }]
 
-// ----------------------------------------------------------------
-// Test case #2 : No turn less cost
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #2 : No turn less cost
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [2, 3], currentStock: 4 },
@@ -87,9 +87,9 @@ branchesFinder(
 [{ name: "Ladprao", location: [2, 3], deliveryCost: 5, amount: 2 }]
 
 
-// ----------------------------------------------------------------
-// Test case #3 : Cheapest has not enough pizza
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #3 : Cheapest has not enough pizza
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [2, 4], currentStock: 3 },
@@ -101,9 +101,9 @@ branchesFinder(
 // Return
 [{ name: "Bangmod", location: [6, 4], deliveryCost: 3, amount: 4 }]
 
-// ----------------------------------------------------------------
-// Test case #4 : Same delivery cost
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #4 : Same delivery cost
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [3, 4], currentStock: 5 },
@@ -115,9 +115,9 @@ branchesFinder(
 // Return
 [{ name: "Ladprao", location: [3, 4], deliveryCost: 6, amount: 3 }]
 
-// ----------------------------------------------------------------
-// Test case #5 : Same delivery cost, same stock
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #5 : Same delivery cost, same stock
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [3, 4], currentStock: 5 },
@@ -129,9 +129,9 @@ branchesFinder(
 // Return
 [{ name: "Ekkamai", location: [2, 3], deliveryCost: 6, amount: 3 }]
 
-// ----------------------------------------------------------------
-// Test case #6 : Need to deliver from multiple branches
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #6 : Need to deliver from multiple branches
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [8, 9], currentStock: 5 },
@@ -147,9 +147,9 @@ branchesFinder(
   { name: "Ekkamai", location: [3, 3], deliveryCost: 7, amount: 2 },
 ]
 
-// ----------------------------------------------------------------
-// Test case #7 : Cannot deliver
-// ----------------------------------------------------------------
+/*----------------------------------------------------------------
+  Test case #7 : Cannot deliver
+---------------------------------------------------------------- */
 branchesFinder(
   [
     { name: "Ladprao", location: [2, 3], currentStock: 7 },
@@ -161,6 +161,5 @@ branchesFinder(
 
 // Return
 []
-
 
 ```
