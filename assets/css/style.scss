@@ -2,9 +2,78 @@
 ---
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --opn-store-primary: #15b695;
+    --background: #1c1c27;
+    --foreground: #96aecc;
+    --dark: #282a3c;
+    --font-base: 'Roboto Slab';
+    --font-monospace: 'Menlo';
+    --line-height: 1.75;
+}
+
+header {
+    border-bottom: 3px solid var(--foreground);
+    display: none;
+}
+
+header h2 {
+    display: none;
+}
+
+#a-title h1 {
+    color: var(--opn-store-primary);
+    font-family: var(--font-base);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: none;
+}
+
+#a-title h1:before {
+    display: none;
+}
+
+section#downloads {
+    display: none;
+}
 
 body {
-  font-family: Poppins;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-base);
+    font-size: 20px;
+    line-height: var(--line-height);
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--opn-store-primary);
+    font-family: var(--font-base);
+    text-shadow: none;
+    margin-top: 3rem;
+}
+
+#main_content h1 {
+    font-size: 3rem;
+}
+
+code {
+    font-family: var(--font-monospace);
+}
+
+pre {
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    border: none;
+    font-family: var(--font-monospace);
+    line-height: 1.5;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+li {
+    line-height: var(--line-height);
+    list-style-type: initial;
+    margin-bottom: 0.5rem;
 }
