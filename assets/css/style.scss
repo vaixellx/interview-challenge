@@ -99,3 +99,16 @@ pre {
   margin-top: 1rem;
   padding-inline-start: 1.5rem;
 }
+
+#main_content table {
+  border-collapse: collapse;
+}
+
+#main_content table td, #main_content table th {
+  border: 3px solid var(--dark);
+}
+
+#main_content table th {
+  background-color: var(--dark);
+  color: var(--opn-store-primary);
+}
