@@ -58,8 +58,6 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
 
 ## Test Cases
 ```js
-branchesFinder()
-
 /*----------------------------------------------------------------
   Test case #1
 ---------------------------------------------------------------- */
@@ -70,8 +68,7 @@ branchesFinder(
   ],
   { location: [6, 7], amount: 2 }
 )
-// Return
-[{ name: "Ekkamai", location: [7, 8], deliveryCost: 3, amount: 2 }]
+// =>  [{ name: "Ekkamai", location: [7, 8], deliveryCost: 3, amount: 2 }]
 
 /*----------------------------------------------------------------
   Test case #2 : No turn less cost
@@ -83,8 +80,8 @@ branchesFinder(
   ],
   { location: [7, 3], amount: 2 }
 )
-// Return
-[{ name: "Ladprao", location: [2, 3], deliveryCost: 5, amount: 2 }]
+
+// =>  [{ name: "Ladprao", location: [2, 3], deliveryCost: 5, amount: 2 }]
 
 
 /*----------------------------------------------------------------
