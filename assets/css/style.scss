@@ -112,3 +112,11 @@ pre {
   background-color: var(--dark);
   color: var(--opn-store-primary);
 }
+
+#main_content a {
+  color: var(--opn-store-primary);
+}
+
+#main_content img {
+  border: 2px solid var(--opn-store-primary);
+}
