@@ -22,9 +22,13 @@ The rules of this house are that each area gate will open for in/out only at 00 
 
 ## Design
 
-#### design_1
+#### Empty state
+![localhost_3000_ (1)](https://user-images.githubusercontent.com/1606989/134034250-160bdd0b-8455-4900-9eae-89a723877212.png)
 
-#### design_2
+
+#### Filled state
+![localhost_3000_ (2)](https://user-images.githubusercontent.com/1606989/134034296-d734d856-7a6f-4b1a-8655-3ae66054f112.png)
+
 
 ## Style Guideline
 Font: [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
