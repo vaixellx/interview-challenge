@@ -52,17 +52,17 @@ attendee name ordered alphabetically, example:
 ```js
 accessLogs = [
   { name: "Mark", area: "VIP Zone",    operation: "enter", time: "09:00" },
-  { name: "Bill", area: "Front Stage", operation: "enter|", time: "0:00 " },
-  { name: "Mark", area: "VIP Zone",    operation: "exit", time: "10:30" },
+  { name: "Bill", area: "Front Stage", operation: "enter", time: "0:00 " },
+  { name: "Mark", area: "VIP Zone",    operation: "exit",  time: "10:30" },
   { name: "Elon", area: "Front Stage", operation: "enter", time: "11:00" },
   { name: "Tim",  area: "VIP Zone",    operation: "enter", time: "11:00" },
-  { name: "Bill", area: "Front Stage", operation: "exit", time: "12:00" },
+  { name: "Bill", area: "Front Stage", operation: "exit",  time: "12:00" },
   { name: "Bill", area: "VIP Zone",    operation: "enter", time: "12:30" },
-  { name: "Tim ", area: "VIP Zone",    operation: "exit", time: "13:00" },
-  { name: "Elon", area: "Front Stage", operation: "exit", time: "15:00" },
+  { name: "Tim ", area: "VIP Zone",    operation: "exit",  time: "13:00" },
+  { name: "Elon", area: "Front Stage", operation: "exit",  time: "15:00" },
   { name: "Mark", area: "Front Stage", operation: "enter", time: "15:30" },
-  { name: "Bill", area: "VIP Zone",    operation: "exit", time: "16:00" },
-  { name: "Mark", area: "Front Stage", operation: "exit", time: "16:30" }
+  { name: "Bill", area: "VIP Zone",    operation: "exit",  time: "16:00" },
+  { name: "Mark", area: "Front Stage", operation: "exit",  time: "16:30" }
 ]
 
 possibleContactFinder(accessLogs, "Bill")
