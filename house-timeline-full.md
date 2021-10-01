@@ -1,4 +1,4 @@
-# House Timeline Extended
+# House Timeline
 There are 4 strangers living in the same house: **Bill, Elon, Mark, and Tim**. This house has 3 shared areas where they can live together: **Living Room, Kitchen, and Backyard**.
 
 Due to COVID-19 situation they decided to track and keep house areas on the website to make it easier to see how often they’re facing each other.
