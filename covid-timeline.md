@@ -27,11 +27,13 @@ Create a web application using Typescript, NodeJS (NestJS), and React (NextJS) t
   - User can remove timeline entry when click on (x) button.
 - User can remove patient and timeline entries by click on Remove Patient button on he top right.
 - Make it responsive and look nice on all screen sizes.
+
 - **BONUS POINT I:** Cover the use case with test.
 - **BONUS POINT II:** Feel free to make it better than the given design 😉
 - **BONUS POINT II:** Use GraphQL as API
 
 ## Design
+![localhost_3000_ (1)](https://user-images.githubusercontent.com/1606989/138546503-b4035c95-c730-4104-ad86-68134614e937.png)
 
 
 ## Style Guideline
@@ -41,8 +43,7 @@ Font: [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
 --background: #012d5e;
 --font-color: #ffffff;
 --blue: #5882E3;
---dark-blue: #1a395c;
---light-blue: #567394;
+--light-blue: #254870;
 --yellow: #ffc107;
 --red: #dc3545;
 --white: #fff;
