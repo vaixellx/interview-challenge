@@ -1,5 +1,3 @@
-# Need to combined with possible contact feature
-
 # Covid Timeline
 Create a web application using Typescript, NodeJS (NestJS), and React (NextJS) to generate COVID Patient Timeline (see [design](#design))
 
@@ -9,7 +7,7 @@ Create a web application using Typescript, NodeJS (NestJS), and React (NextJS) t
   - Gender: string
   - Age: integer
   - Occupation: string
-- User can add timeline enty using form on the right, a timeline entry contains these data
+- User can add timeline entry using form on the right, a timeline entry contains these data
   - Time From: datetime
   - Time To: datetime
   - Detail: string
@@ -20,14 +18,14 @@ Create a web application using Typescript, NodeJS (NestJS), and React (NextJS) t
   - OUTDOOR
   - HOME
   - TRAVELLING
-- When location type is INDOOR and OUTDOOR user need to specify the location name.
+- When location type is `INDOOR` and `OUTDOOR` user need to specify the location name.
 - On the left side use patient data and timeline entry data to display data as show in the design
   - Timeline activities must be sorted by Time.
   - Each timeline entry must not collapsed with other entry.
   - Timeline activities must be grouped by date.
   - Visited locations must be sorted by name.
   - User can remove timeline entry when click on (x) button.
-- User can remove patient and timeline entries by click on `Remove Patient` button on he top right.
+- User can remove patient and timeline entries by click on Remove Patient button on he top right.
 - Make it responsive and look nice on all screen sizes.
 - **BONUS POINT I:** Cover the use case with test.
 - **BONUS POINT II:** Feel free to make it better than the given design 😉
