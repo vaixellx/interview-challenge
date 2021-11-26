@@ -2,8 +2,7 @@
 Create a web application using Typescript, NodeJS (NestJS would be a plus), and React (NextJS would be a plus) to generate COVID Patient Timeline (see [design](#design))
 
 ## Requirement
-- User can click on (+) to add new patient up to 8 patients.
-- User can add each patient information using form on top, the patient contains these data
+- User can add patient information using form on top, the patient contains these data
   - Gender: string
   - Age: integer
   - Occupation: string
@@ -25,7 +24,6 @@ Create a web application using Typescript, NodeJS (NestJS would be a plus), and 
   - Timeline activities must be grouped by date.
   - Visited locations must be sorted by name.
   - User can remove timeline entry when click on (x) button.
-- User can remove patient and timeline entries by click on Remove Patient button on he top right.
 - Make it responsive and look nice on all screen sizes.
 
 - **BONUS POINT I:** Cover the use case with test.
