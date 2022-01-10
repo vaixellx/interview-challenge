@@ -28,7 +28,7 @@ Create a web application using Typescript, NodeJS (NestJS would be a plus), and 
 
 - **BONUS POINT I:** Cover the use case with test.
 - **BONUS POINT II:** Feel free to make it better than the given design 😉
-- **BONUS POINT II:** Use GraphQL as API
+- **BONUS POINT III:** Use GraphQL as API
 
 ## Design
 ![covid-timeline](https://user-images.githubusercontent.com/1606989/143536325-c226bc8d-6e80-4a01-a335-77a6d493d9bc.png)
