@@ -25,6 +25,7 @@ Create a web application using Typescript, NodeJS (NestJS would be a plus), and 
   - Visited locations must be sorted by name.
   - User can remove timeline entry when click on (x) button.
 - Make it responsive and look nice on all screen sizes.
+- **Update README.md to containing setup instructions, pretend that reviewer who has brand new laptop can set it up successfully.**
 
 - **BONUS POINT I:** Cover the use case with test.
 - **BONUS POINT II:** Feel free to make it better than the given design 😉
