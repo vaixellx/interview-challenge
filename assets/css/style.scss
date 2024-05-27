@@ -2,7 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css2?family=Taviraj');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai');
 
 :root {
   --primary: #15b695;
@@ -10,7 +10,7 @@
   --background: #1c1c27;
   --foreground: #96aecc;
   --dark: #282a3c;
-  --font-base: 'Taviraj';
+  --font-base: 'Noto Serif Thai';
   --font-monospace: 'Menlo';
   --line-height: 1.5;
 }
