@@ -116,7 +116,9 @@ pre {
 }
 
 #main_content a {
-  color: var(--primary);
+  color: var(--secondary);
+  font-weight: bold;
+  text-shadow: none;
 }
 
 #main_content img {
@@ -128,4 +130,8 @@ pre {
   color: var(--inline-code-foreground);
   margin: 0 0.1em;
   padding: 0.1em 0.3em;
+}
+
+#main_content hr {
+  border-bottom: 2px solid var(--inline-code-background);
 }
