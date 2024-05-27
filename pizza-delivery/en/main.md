@@ -1,3 +1,11 @@
+<p style="text-align: right">
+  [ไทย](https://vaixellx.github.io/interview-challenge/pizza-delivery/th/main)
+  |
+  [English](https://vaixellx.github.io/interview-challenge/pizza-delivery/en/main)
+</p>
+
+---
+
 # Pizza Hat
 
 As a Pizza restaurant we need to optimize delivery cost and ensure that customers will get their order delivered as fast as possible. When a customer places an order we would like to find the closest branch which can serve the customer's order.

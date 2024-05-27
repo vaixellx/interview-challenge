@@ -1,3 +1,11 @@
+<p style="text-align: right">
+  [ไทย](https://vaixellx.github.io/interview-challenge/pizza-delivery/th/main)
+  |
+  [English](https://vaixellx.github.io/interview-challenge/pizza-delivery/en/main)
+</p>
+
+---
+
 # Pizza Hat
 
 ร้านพิซซ่าแฮทต้องการส่งพิซซ่าถึงบ้านลูกค้าด้วยเวลาที่สั้นที่สุดเพื่อให้ลูกค้าได้ทานพิซซ่าในขณะที่ยัง้อยและในขณะเดียวกันก็มีต้นทุนการจัดส่งที่ต่ำที่สุดด้วย ดังนั้นเมื่อมีออร์เดอร์จากลูกค้าเข้ามาทางร้านจะต้องทำการคำนวนและทำการจัดส่งจากสาขาที่อยู่ใกล้กับลูกค้ามากที่สุด

@@ -7,12 +7,14 @@
 :root {
   --primary: #15b695;
   --secondary: #39ace7;
-  --background: #1c1c27;
-  --foreground: #96aecc;
-  --dark: #282a3c;
+  --background: #f5f5f5;
+  --foreground: #555;
+  --dark: #333;
   --font-base: 'Noto Serif Thai';
   --font-monospace: 'Menlo';
   --line-height: 1.5;
+  --inline-code-background: #ccc;
+  --inline-code-foreground: #f55;
 }
 
 header {
@@ -119,4 +121,11 @@ pre {
 
 #main_content img {
   border: 2px solid var(--primary);
+}
+
+#main_content code.highlighter-rouge {
+  background: var(--inline-code-background);
+  color: var(--inline-code-foreground);
+  margin: 0 0.1em;
+  padding: 0.1em 0.3em;
 }
