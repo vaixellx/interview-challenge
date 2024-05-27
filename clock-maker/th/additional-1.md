@@ -21,6 +21,6 @@ clock_arms_radius("20:41:52")
 
 ---
 
-[< Prev](https://vaixellx.github.io/interview-challenge/clock-maker/main)
+[< Prev](https://vaixellx.github.io/interview-challenge/clock-maker/th/main)
 |
-[Next >](https://vaixellx.github.io/interview-challenge/clock-maker/additional-2)
+[Next >](https://vaixellx.github.io/interview-challenge/clock-maker/th/additional-2)

@@ -1,7 +1,7 @@
 <p style="text-align: right">
-  <a href="https://vaixellx.github.io/interview-challenge/pizza-delivery/th/main)">ไทย</a>
+  <a href="https://vaixellx.github.io/interview-challenge/pizza-delivery/th/main">ไทย</a>
   |
-  <a href="https://vaixellx.github.io/interview-challenge/pizza-delivery/en/main)">English</a>
+  <a href="https://vaixellx.github.io/interview-challenge/pizza-delivery/en/main">English</a>
 </p>
 
 ---
