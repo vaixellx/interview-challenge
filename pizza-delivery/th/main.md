@@ -12,8 +12,8 @@
 
 สมมติว่าเมืองที่ร้านตั้งอยู่เป็นตารางพื้นที่สองมิติที่ถูกแบ่งออกเป็นช่อง 10 x 10 และคนส่งพิซซ่าสามารถขับรถได้เพียงแค่ 2 ทิศทางเท่านั้นคือวิ่งในแนวตั้งและแนวนอน ในการคำนวนค่าจัดส่งนั้นเมื่อคนขับทำการขับรถข้ามจากช่องหนึ่งไปอีกช่องหนึ่งโดยไม่มีการเปลี่ยนทิศทางค่าจัดส่งจะเพิ่มขึ้น 1 ในแต่ถ้าคนขับต้องมีการเลี้ยวเปลี่ยนทิศทางค่าจะส่งจะเพิ่มขึ้น 2
 
-ตัวอย่างเช่น ร้านอยู่ที่ตำแหน่ง **[ 1, 3 ]** (X) และคนขับต้องทำการจัดส่งไปยังลูกค้าที่ตำแหน่ง
-**[ 7, 5 ]** (Y) ค่าจัดส่งจะเท่ากับ **9** ดังตัวอย่างด้านล่าง
+ตัวอย่างเช่น ร้านอยู่ที่ตำแหน่ง **[ 1, 3 ]** (A) และคนขับต้องทำการจัดส่งไปยังลูกค้าที่ตำแหน่ง
+**[ 7, 5 ]** (B) ค่าจัดส่งจะเท่ากับ **9** ดังตัวอย่างด้านล่าง
 
 ```
      1    2    3    4    5    6    7    8    9    10
@@ -22,11 +22,11 @@
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
 2  ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
-3  ┃ (X)╋━+1━╋━+1━╋━+1━╋━+1━╋━+1━╋━+2 ┃    ┃    ┃    ┃
+3  ┃ (A)╋━+1━╋━+1━╋━+1━╋━+1━╋━+1━╋━+2 ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━╋━╋━━━━╋━━━━╋━━━━┫
 4  ┃    ┃    ┃    ┃    ┃    ┃    ┃ +1 ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━╋━╋━━━━╋━━━━╋━━━━┫
-5  ┃    ┃    ┃    ┃    ┃    ┃    ┃ (Y)┃ +1 ┃    ┃    ┃
+5  ┃    ┃    ┃    ┃    ┃    ┃    ┃ (B)+1   ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
 6  ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
@@ -73,81 +73,81 @@
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [4, 7], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 3, current_stock: 1 }
+{ name: "On-nut", location: [7, 7], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #2 : With turn
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [3, 7], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 4, current_stock: 1 }
+{ name: "On-nut", location: [7, 7], delivery_cost: 4, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #3 : Cheapest has not enough pizza
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [3, 7], amount: 4 }
 )
 
 # return
-{ name: "Ladprao", location: [2, 4], delivery_cost: 5, current_stock: 1 }
+{ name: "Thonglor", location: [2, 4], delivery_cost: 5, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #4 : Same delivery cost
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 4 }
+    { name: "Ekkamai", location: [3, 8], current_stock: 4 },
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 3, current_stock: 1 }
+{ name: "On-nut", location: [7, 7], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #5 : Same delivery cost, same stock
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 3 }
+    { name: "Ekkamai", location: [3, 8], current_stock: 3 },
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 2 }
 )
 
 # return
-{ name: "Bangmod", location: [3, 8], delivery_cost: 3, current_stock: 1 }
+{ name: "Ekkamai", location: [3, 8], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #6 : Cannot deliver
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 4 }
+    { name: "Ekkamai", location: [3, 8], current_stock: 3 },
+    { name: "On-nut", location: [7, 7], current_stock: 3 },
+    { name: "Thonglor", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 7 }
 )

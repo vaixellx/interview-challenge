@@ -12,7 +12,7 @@ As a Pizza restaurant we need to optimize delivery cost and ensure that customer
 
 Our city is a 2D-Grid system and divided into 10 x 10 blocks. A driver can only drive in vertical and horizontal direction. When they drive across a block the cost of delivery is plus by 1, but when they need to turn the across the block delivery cost will be plus by 2.
 
-For example a branch is located at **[ 1, 3 ]** (X) and needs to deliver pizza to a customer located at **[ 7, 5 ]** (Y) the delivery cost will be **9**, the calculation is look like this
+For example a branch is located at **[ 1, 3 ]** (A) and needs to deliver pizza to a customer located at **[ 7, 5 ]** (B) the delivery cost will be **9**, the calculation is look like this
 
 ```
      1    2    3    4    5    6    7    8    9    10
@@ -21,11 +21,11 @@ For example a branch is located at **[ 1, 3 ]** (X) and needs to deliver pizza t
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
 2  ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
-3  ┃ (X)╋━+1━╋━+1━╋━+1━╋━+1━╋━+1━╋━+2 ┃    ┃    ┃    ┃
+3  ┃ (A)╋━+1━╋━+1━╋━+1━╋━+1━╋━+1━╋━+2 ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━╋━╋━━━━╋━━━━╋━━━━┫
 4  ┃    ┃    ┃    ┃    ┃    ┃    ┃ +1 ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━╋━╋━━━━╋━━━━╋━━━━┫
-5  ┃    ┃    ┃    ┃    ┃    ┃    ┃ (Y)┃ +1 ┃    ┃    ┃
+5  ┃    ┃    ┃    ┃    ┃    ┃    ┃ (B)+1   ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
 6  ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃    ┃
    ┣━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━╋━━━━┫
@@ -47,8 +47,8 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
 - First argument is an array of a restaurant branch's objects containing name, location and `current_stock`, example:
   ```ruby
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "Shibuya", location: [2, 4], current_stock: 5 },
+    { name: "Minato", location: [7, 7], current_stock: 3 }
   ]
   ```
 - Second argument is the customer's order object containing customer’s location and amount of ordered pizza, example:
@@ -61,7 +61,7 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
   - When there are no branches that have enough stock to deliver a customer order, raise an error.
 - This function must return the branch to delivering the customer order as object containing the restaurant branch name, location, delivery cost, and stock left after processing customer's order in this format
   ```ruby
-  { name: "Ekkamai", location: [4, 7], delivery_cost: 3, current_stock: 1 }
+  { name: "Minato", location: [4, 7], delivery_cost: 3, current_stock: 1 }
   ```
 
 ## Test Cases
@@ -72,81 +72,81 @@ In addition each restaurant also has a limited amount of pizza in their stock, o
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [4, 7], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 3, current_stock: 1 }
+{ name: "Minato", location: [7, 7], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #2 : With turn
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [3, 7], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 4, current_stock: 1 }
+{ name: "Minato", location: [7, 7], delivery_cost: 4, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #3 : Cheapest has not enough pizza
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 }
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [3, 7], amount: 4 }
 )
 
 # return
-{ name: "Ladprao", location: [2, 4], delivery_cost: 5, current_stock: 1 }
+{ name: "Shibuya", location: [2, 4], delivery_cost: 5, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #4 : Same delivery cost
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 4 }
+    { name: "Itabashi", location: [3, 8], current_stock: 4 },
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 2 }
 )
 
 # return
-{ name: "Ekkamai", location: [7, 7], delivery_cost: 3, current_stock: 1 }
+{ name: "Minato", location: [7, 7], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #5 : Same delivery cost, same stock
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 3 }
+    { name: "Itabashi", location: [3, 8], current_stock: 3 },
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 2 }
 )
 
 # return
-{ name: "Bangmod", location: [3, 8], delivery_cost: 3, current_stock: 1 }
+{ name: "Itabashi", location: [3, 8], delivery_cost: 3, current_stock: 1 }
 
 # ----------------------------------------------------------------
 #  Test case #6 : Cannot deliver
 # ----------------------------------------------------------------
 branches_finder(
   [
-    { name: "Ladprao", location: [2, 4], current_stock: 5 },
-    { name: "Ekkamai", location: [7, 7], current_stock: 3 },
-    { name: "Bangmod", location: [3, 8], current_stock: 4 }
+    { name: "Itabashi", location: [3, 8], current_stock: 3 },
+    { name: "Minato", location: [7, 7], current_stock: 3 },
+    { name: "Shibuya", location: [2, 4], current_stock: 5 }
   ],
   { location: [6, 8], amount: 7 }
 )
